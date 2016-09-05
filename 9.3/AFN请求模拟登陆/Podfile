@@ -1,0 +1,8 @@
+
+platform :ios, '8.0'
+
+target 'AFN请求模拟登陆' do
+pod 'AFNetworking'
+
+
+end
