@@ -26,9 +26,13 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     NSMutableString *str = [NSMutableString string];
    [ str appendString:@"var headerTag = document.getElementsByTagName('header')[0]; headerTag.parentNode.removeChild(headerTag);"];
+       NSLog(@"%@",str);
     [str appendString:@"var footerTag = document.getElementsByClassName('footer')[0]; footerTag.parentNode.removeChild(footerTag);"];
+       NSLog(@"%@",str);
     [str appendString:@"var footerBtnTag = document.getElementsByClassName('footer-btn-fix')[0]; footerBtnTag.parentNode.removeChild(footerBtnTag);"];
-    [str appendString:@"var imgTag = document.getElementsByTagName('figure')[0].children[0]; imgTag.onclick=function() {window.location.href='http:www.baidu.com'};"];
+    NSLog(@"%@",str);
+    [str appendString:@"var imgTag = document.getElementsByTagName('figure')[0].children[0]; imgTag.onclick=function() {window.location.href='http://www.baidu.com'};"];
+       NSLog(@"%@",str);
     [self.webView stringByEvaluatingJavaScriptFromString:str];
     
 }
@@ -39,7 +43,7 @@
     NSURL *url1 = request.URL;
     NSLog(@"%@",urlstr);
     NSLog(@"%@",url1);
-    if([urlstr isEqualToString:@"http:www.baidu.com"]){
+    if([urlstr isEqualToString:@"http://www.baidu.com"]){
         
         TestViewController *testvc = [[TestViewController alloc] init];
         [self.navigationController pushViewController:testvc animated:YES];

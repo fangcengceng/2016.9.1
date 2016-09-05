@@ -146,8 +146,9 @@
     customLabel *left_label = _labelM[left_index];
     left_label.scale = left_scale;
 //   //右边的缩放比
+    if(right_index<_labelM.count){
     customLabel *right_label =_labelM[right_index];
     right_label.scale = right_scale;
-    
+    }
 }
 @end
