@@ -40,9 +40,8 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     //获取URL,调用absoluteString属性，将URl转化为字符串，方便以后开发使用
     NSString *urlstr = request.URL.absoluteString;
-    NSURL *url1 = request.URL;
+
     NSLog(@"%@",urlstr);
-    NSLog(@"%@",url1);
     if([urlstr isEqualToString:@"http://www.baidu.com"]){
         
         TestViewController *testvc = [[TestViewController alloc] init];

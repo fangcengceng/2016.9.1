@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
 }
 -(void)setUrlName:(NSString *)urlName{
     _urlName = urlName;
